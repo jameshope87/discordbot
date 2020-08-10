@@ -15,6 +15,9 @@ async def on_message(message):
 
     if message.content.startswith('!assign-role'):
         role_name = message.content[message.content.find(' ') + 1:].lower()
+        role_name = role_name[0].upper() + role_name[1:]
+        location = role_name.find('/') + 1
+        role_name = role_name[:location] + role_name[location].upper() + role_name[location + 1:]
         print(role_name)
 #        await message.guild.create_role(name=role_name)
 
