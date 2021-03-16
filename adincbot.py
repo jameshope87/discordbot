@@ -27,7 +27,8 @@ async def on_ready():
     except:
         print("Message could not be deleted")
     try:
-        global message_id = await selected_channel.send("Hello! I am here to assist you in selecting a pronoun role. Please react with an emoji below. /n :fire: He/His /n :eyes: She/Hers /n :lightbulb: They/Theirs")
+        #global message_id = await selected_channel.send('Hello! I am here to assist you in selecting a pronoun role. Please react with an emoji below. /n :fire: He/His /n :eyes: She/Hers /n :lightbulb: They/Theirs')
+        global message_id = await selected_channel.send('Hello!')
         # I have no idea if this works either. In theory it should, but who knows. My linter is complainging about syntax but I think that's because it doesn't realize this function has a return value of a message.
     except:
         print("Message could not be sent")
